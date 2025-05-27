@@ -24,21 +24,21 @@ namespace SampleCoreGithubChecking.Migrations
                     table.PrimaryKey("PK_Emps", x => x.eid);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "SampleStudent",
-                columns: table => new
-                {
-                    StudentID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
-                    LastName = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
-                    Email = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: true),
-                    EnrollmentDate = table.Column<DateTime>(type: "date", nullable: true, defaultValueSql: "(getdate())")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__SampleSt__32C52A79E79639AB", x => x.StudentID);
-                });
+            //migrationBuilder.CreateTable(
+            //    name: "SampleStudent",
+            //    columns: table => new
+            //    {
+            //        StudentID = table.Column<int>(type: "int", nullable: false)
+            //            .Annotation("SqlServer:Identity", "1, 1"),
+            //        FirstName = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
+            //        LastName = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: true),
+            //        Email = table.Column<string>(type: "varchar(100)", unicode: false, maxLength: 100, nullable: true),
+            //        EnrollmentDate = table.Column<DateTime>(type: "date", nullable: true, defaultValueSql: "(getdate())")
+            //    },
+            //    constraints: table =>
+            //    {
+            //        table.PrimaryKey("PK__SampleSt__32C52A79E79639AB", x => x.StudentID);
+            //    });
         }
 
         /// <inheritdoc />
@@ -47,8 +47,8 @@ namespace SampleCoreGithubChecking.Migrations
             migrationBuilder.DropTable(
                 name: "Emps");
 
-            migrationBuilder.DropTable(
-                name: "SampleStudent");
+            //migrationBuilder.DropTable(
+            //    name: "SampleStudent");
         }
     }
 }
