@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SampleCoreGithubChecking.Data;
 using SampleCoreGithubChecking.Models;
 
@@ -24,6 +25,12 @@ namespace SampleCoreGithubChecking.Controllers
         public IActionResult Index()
         {
             var data= db.SampleStudents.ToList();
+            return View(data);
+        }
+
+        public async Task<IActionResult> demoergo()
+        {
+            var data = await db.SampleStudents.ToListAsync();
             return View(data);
         }
 
