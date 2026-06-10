@@ -28,7 +28,7 @@ namespace SampleCoreGithubChecking.Controllers
             return View(data);
         }
 
-        public async Task<IActionResult> demoergo()
+        public async Task<IActionResult> demoergov2()
         {
             var data = await db.SampleStudents.ToListAsync();
             return View(data);
